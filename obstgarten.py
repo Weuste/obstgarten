@@ -44,7 +44,7 @@ class Obstgarten:
         dice = random.choice(self.__dice)
 
         if dice in self._trees:
-            self._trees[dice] -= 1
+            self._trees[dice] = max(0, self._trees[dice] - 1)
             return 
 
         if dice == self.__dice_badguy:
