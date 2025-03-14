@@ -119,8 +119,8 @@ def single_game():
 def main():
     single_game()
 
-    print(f"Win percenate classic: {simulate(10000)}")
-    print(f"Win percenate new    : {simulate(10000, 10, 10, 2)}")
+    print(f"Win percenatage classic: {simulate(10000)*100}")
+    print(f"Win percenatage new    : {simulate(10000, 10, 10, 2)*100}")
 
 if __name__ == "__main__": main()
 #EOF
