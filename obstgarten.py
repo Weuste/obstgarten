@@ -91,7 +91,7 @@ class Obstgarten:
         return s
 
 
-def simulate(rounds_count = 10000):
+def simulate(rounds_count = 10000, obst_count = 4, raven_count = 6, choice_count = 1):
     game = Obstgarten()
 
     win_count = 0
@@ -100,7 +100,7 @@ def simulate(rounds_count = 10000):
         if game.play():
             win_count += 1
 
-    return win_count
+    return win_count / rounds_count
 
 def single_game():
     game = Obstgarten()
@@ -119,9 +119,8 @@ def single_game():
 def main():
     single_game()
 
-    result = simulate(10000)
-
-    print(f"Won {result} times out of 10000")
+    print(f"Win percenate classic: {simulate(10000)}")
+    print(f"Win percenate new    : {simulate(10000, 10, 10, 2)}")
 
 if __name__ == "__main__": main()
 #EOF
